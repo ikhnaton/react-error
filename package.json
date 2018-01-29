@@ -1,6 +1,6 @@
 {
   "name": "react-error",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Display popup error by dispatching action",
   "main": "messages.js",
   "scripts": {
