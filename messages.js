@@ -33,6 +33,18 @@ var Messages = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (Messages.__proto__ || Object.getPrototypeOf(Messages)).call(this, props));
 
 		_this.closeModal = _this.closeModal.bind(_this);
+
+		var tmp = document.getElementsByTagName('react-error');
+
+		if (tmp == null || tmp.length == 0) {
+			var reactErrorStyle = ".message-backdrop{position:absolute;top:0;bottom:0;left:0;right:0;background-color:grey;z-index:4000;opacity:.5}.message-container{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);margin:auto;width:45%;border:none;border-radius:32px;background-color:#edf1ea;padding:20px;opacity:1;z-index:4001}.message-container button{position:absolute;right:15px;top:15px;border-radius:none;border:none;background-color:inherit;font-size:16px}.message-container div{max-width:calc(100% - 25px)}.message-title-default{margin-bottom:4px;font-weight:900}.message-text-default{white-space:pre}.message-title{color:#000}.message-text{color:red}";
+
+			var style = document.createElement('react-error');
+			style.type = 'text/css';
+			style.innerHTML = reactErrorStyle;
+			document.getElementsByTagName('head')[0].appendChild(style);
+		}
+
 		return _this;
 	}
 

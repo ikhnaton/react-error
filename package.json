@@ -1,6 +1,6 @@
 {
   "name": "react-error",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Display popup error by dispatching action",
   "main": "messages.js",
   "scripts": {
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "react",
-    "error"
+    "error",
+	"message"
   ],
   "author": "ikhnaton <ikhnaton@techie.com>",
   "license": "ISC",
