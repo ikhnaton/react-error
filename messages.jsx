@@ -24,7 +24,7 @@ export default class Messages extends React.Component
 	render()
 	{
 		return (this.props.messages.isVisible === false)?null:(
-			<div>
+			<div className="react-error">
 				<div className="message-backdrop">
 
 				</div>

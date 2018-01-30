@@ -53,7 +53,7 @@ var Messages = function (_React$Component) {
 		value: function render() {
 			return this.props.messages.isVisible === false ? null : _react2.default.createElement(
 				'div',
-				null,
+				{ className: 'react-error' },
 				_react2.default.createElement('div', { className: 'message-backdrop' }),
 				_react2.default.createElement(
 					'div',
