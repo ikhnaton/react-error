@@ -1,5 +1,50 @@
-##react-error
+# react-error
+*** This doc is still under construction and is incomplete ***
+
 This is a very simple library designed to work with React and Redux to display a basic, highly customizable, message popup.
+
+![](error.png)
+
+### Installation
+
+This component can be installed using `npm`.
+
+```
+npm install --save react-error
+```
+
+### Documentaion
+
+To make the component available, simply drop the component into a section of your application that is common throughout your application.  A common header or footer is usually a good place to drop the component:
+
+```javascript
+import Messages from 'react-error';
+	:
+	:
+<Messages />
+	:
+	:
+```
+
+Connect the reducer to your state object as follows:
+
+```javascript
+import message from 'react-error/reducer';
+
+const rootReducer = combineReducers({
+	:	:	:
+	:	// other state items
+	:	:	:
+	messages: message,
+	:	:	:
+	:	// other state items
+	:	:	:
+});
+```
+
+The component will display a popup when it receives specific properties in state.
+
+
 
 The default css styling is:
 
@@ -74,17 +119,10 @@ The default css styling is:
 
 Any of the css styling can be overriden by specifying `.react-error` before the style as follows:
 
-```
+```css
 .react-error .message-backdrop
 {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
 	background-color: blue;
-	z-index: 4000;
-	opacity: 0.5;
 }
 ```
 
