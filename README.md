@@ -1,5 +1,4 @@
 # react-error
-*** This doc is still under construction and is incomplete ***
 
 This is a very simple library designed to work with React and Redux to display a basic, highly customizable, message popup.
 
@@ -19,11 +18,25 @@ To make the component available, simply drop the component into a section of you
 
 ```javascript
 import Messages from 'react-error';
+
+class XYZ extends React.Component
+{
 	:
 	:
-<Messages />
+	render() {
+		return (
+			<div>
+				:
+				:
+				<Messages />
+				:
+				:
+			</div>
+		);
+	}
 	:
 	:
+}
 ```
 
 Connect the reducer to your state object as follows:
@@ -42,11 +55,40 @@ const rootReducer = combineReducers({
 });
 ```
 
-The component will display a popup when it receives specific properties in state.
+Finally, in order to trigger the popup simply dispatch the `setMessageText` action:
 
+```javascript
+import * as messageActions from 'react-error/actions';
+	:
+	:
+	this.props.dispatch(messageActions.setMessageText("Display this message."));
+```
 
+### Supported actions
 
-The default css styling is:
+`setMessageText(text)`
+
+> Set the message text to be displayed.
+
+`setMessageClass(className)`
+
+> Set the css class used to style the message text.
+
+`setMessageTitleText(text)`
+
+> Set the heading text for the popup.
+
+`setMessageTitleClass(className)`
+
+> Set the css class used to style the heading texts.
+
+`clearMessage()`
+
+> Clear the message text and close the popup.  This is called by default when a user clicks the **X** while the popup is open.
+
+### Custom styling
+
+The default css styling for the popup is:
 
 ```css
 .message-backdrop
@@ -69,7 +111,6 @@ The default css styling is:
 	transform: translate(-50%, -50%);
 	margin: auto;
 	width: 45%;
-/*	min-height: 20%;*/
 	border: none;
 	border-radius: 32px;
 	background-color: #edf1ea;
@@ -125,5 +166,3 @@ Any of the css styling can be overriden by specifying `.react-error` before the 
 	background-color: blue;
 }
 ```
-
-further documentation coming soon.
